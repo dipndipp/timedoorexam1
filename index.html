@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Universal art</title>
+    <script
+    src="https://kit.fontawesome.com/
+f90068558c.js"
+    crossorigin="anonymous"
+  ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h3 class="title"><a href="index.html">Universal Art</a></h3>
+        <nav>
+          <a href="project.html">Tutorial</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="jumbotron">
+      <div class="jumbotron">
+        <div class="header-flex">
+          <div>
+            <h1 class="jumbotron-text">
+              “It is important to know How to Draw,<br />
+              Before you Start Drawing”
+              <br />
+              <br />
+              This blog will show you the fun and easiest way to draw!
+            </h1>
+            <div class="mini-text-flex">
+              <p class="mini-text">
+                You are not limited by what you can or can't do. Try it
+                step-by-step, anywhere, anytime, without worries.
+                <br />
+                Let's start, don't be doubt
+              </p>
+
+              <button id="icon-down" class="icon-down">
+                <i class="far fa-hand-point-down" onclick="changeText()"></i>
+              </button>
+            </div>
+          </div>
+          <div>
+            <img
+              onmouseover="changeImage(this)"
+              onmouseout="changeImageBack(this)"
+              class="jumbotron-img"
+              src="assets/img-header1.png"
+              alt="gambar"
+              width="auto"
+              height="300"
+              style="border-radius: 10px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="main-content">
+      <aside>
+        <div class="profile">
+          <h3 class="aside-title">Caitlin Halderman</h3>
+          <img
+            class="profile-picture"
+            src="assets/profile-photo.jpg"
+            alt="Cobee"
+            width="150px"
+            height="auto"
+          />
+          <!-- ------------------------ Meeting 11----------------------- -->
+          <div class="toggle">
+            <button ondblclick="lek()" class="btn" id="green">
+              <i class="fa fa-thumbs-up fa-lg"></i>
+            </button>
+            <button ondblclick="dislek()" class="btn" id="red">
+              <i class="fa fa-thumbs-down fa-lg"></i>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="content">
+        <article id="my-project">
+          <h3 class="article-title">Project teaster</h3>
+          <div class="project-container">
+            <div class="project">
+              <img
+                src="assets/drawing1.jpg "
+                alt=""
+                width="300px"
+                height="210px"
+              />
+              <h4 class="project-title">Professional Character</h4>
+              <p class="project-description">
+                We will learn how to draw a professional character combine
+                with colorful texture using digital art
+              </p>
+            </div>
+            <div class="project">
+              <img
+                src="assets/drawing2.jpg "
+                alt=""
+                width="300px"
+                height="210px"
+              />
+              <h4 class="project-title">Objects</h4>
+              <p class="project-description">
+                Drawing objects may look easier, but how to make it looks
+                like real?
+              </p>
+            </div>
+          
+          </div>
+          <div class="project-container">
+            <div class="project">
+                <img
+                  src="assets/drawing3.jpg"
+                  alt=""
+                  width="300px"
+                  height="210px"
+                />
+                <h4 class="project-title">Colorful Painting</h4>
+                <p class="project-description">
+                    Not only digital art tutorial, but we also provide watercolor
+                    based tutorial
+                </p>
+              </div>
+              <div class="project">
+                <img
+                  src="assets/drawing4.jpg "
+                  alt=""
+                  width="300px"
+                  height="210px"
+                />
+                <h4 class="project-title">Monocrom Painting
+                </h4>
+                <p class="project-description">
+                    Sometimes it becomes bored to apply so many color. So, let's have a different looks sometimes with black and white
+
+
+                </p>
+              </div>
+          </div>
+        </article>
+        <!-- ------------------------ Meeting 11----------------------- -->
+        <article id="video">
+          <div class="item-video">
+            <h3 class="article-title">What is Coding?</h3>
+            <iframe
+              class="video-content"
+              width="700px"
+              height="400px"
+              src="https://www.youtube.com/embed/W7texgGDaRs?si=ny9lvvbKQLqQvXdF"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+         
+          
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <footer>
+        <div class="main-footer">
+          <h3 class="info-top">caitlin at universal art</h3>
+          <div class="social-media">
+            <i class="fab fa-instagram-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fas fa-envelope"></i>
+          </div>
+          <p class="info-center">
+            Copyright &copy; 2023. Nadhif. All rights reserved.
+          </p>
+        </div>
+      </footer>
+  </body>
+  <script>
+    function changeImage(element) {
+      element.setAttribute("src", "assets/img-header1.png");
+      // element.setAttribute("height", "300")
+      // element.setAttribute("class", "jumbotron-img")
+    }
+
+    function changeImageBack(element) {
+      element.setAttribute("src", "assets/img-header2.png");
+      // element.setAttribute("height", "300")
+    }
+
+    var btnLike = document.querySelector("#green");
+var btnDislike = document.querySelector("#red");
+
+if (btnLike) {
+  btnLike.onclick = likeColor;
+}
+if (btnDislike) {
+  btnDislike.onclick = dislikeColor;
+}
+
+function likeColor() {
+  if (btnDislike.classList.contains("red")) {
+    btnDislike.classList.remove("red");
+  }
+
+  this.classList.toggle("green");
+}
+
+function dislikeColor() {
+  if (btnLike.classList.contains("green")) {
+    btnLike.classList.remove("green");
+  }
+
+  this.classList.toggle("red");
+}
+  </script>
+</html>
